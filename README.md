@@ -25,12 +25,17 @@ It is basically great tools for creating Automated web based test suites.
 Docker - Usage
 -------------------
 
-#### Run .JS file in container
+#### Run PhantomJS file in container
 Example: Run hello.js from your working directory in a container.
 ```sh
 docker run --rm -v $(pwd)/hello.js:/hello.js obgr/d-casperjs phantomjs hello.js
 ```
 
+#### Run CasperJS file in container
+Example: Run casper-test.js from your working directory in a container.
+```sh
+docker run --rm -v $(pwd)/casper-test.js:/casper-test.js obgr/d-casperjs casperjs casper-test.js
+```
 
 #### Run Image interactively
 ```sh
