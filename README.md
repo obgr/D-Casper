@@ -2,7 +2,7 @@ D-CasperJS
 ===================
 
 
-Debian 9 &amp; PhantomJS based CasperJS "base image" for Docker.
+Debian 9 &amp; PhantomJS based CasperJS image for Docker.
 
 ----------
 
@@ -25,10 +25,16 @@ It is basically great tools for creating Automated web based test suites.
 Docker - Usage
 -------------------
 
+#### Run .JS file in container
+Example: Run hello.js from your working directory in a container.
+```sh
+docker run --rm -v $(pwd)/hello.js:/hello.js obgr/d-casperjs phantomjs hello.js
+```
+
 
 #### Run Image interactively
 ```sh
-docker run -it obgr/d-casperjs:latest yourscript.cs
+docker run -it obgr/d-casperjs:latest phantomjs hello.js
 ```
 
 #### Pull Image
