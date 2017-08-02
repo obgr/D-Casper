@@ -1,4 +1,4 @@
-# obgr/CasperJS - Debian 9 & PhantomJS based CasperJS image.
+# obgr/D-CasperJS - Debian 9 & PhantomJS based CasperJS image.
 
 FROM debian:9
 MAINTAINER https://github.com/obgr
