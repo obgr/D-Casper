@@ -44,6 +44,7 @@ RUN set -x  \
  && curl -L https://bitbucket.org/ariya/phantomjs/downloads/${PHJS_PKG} \
         | tar -xj --strip-components=1 -C /tmp/phantomjs \
  && mv /tmp/phantomjs/bin/phantomjs /usr/local/bin \
+ && rm -rf /tmp/phantomjs \
     # Test Run PhantomJS
  && su ${PHJS_UN} -s /bin/sh -c "phantomjs --version"
 
@@ -60,7 +61,7 @@ RUN cd /opt \
     # Create symbolic link
  && ln -sf `pwd`/bin/casperjs /usr/local/bin/casperjs \
     # Test run CasperJS
- && su ${PHJS_UN} -s /bin/sh -c "casperjs"
+ && su ${PHJS_UN} -s /bin/sh -c "casperjs" 
 
 ############################
 #  Purge excess packages   #
