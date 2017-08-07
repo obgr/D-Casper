@@ -80,6 +80,4 @@ USER ${PHJS_UN}
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 
-#CMD ["phantomjs"]
-#CMD ["casperjs"]
 CMD ["/bin/bash"]
