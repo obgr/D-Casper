@@ -39,7 +39,7 @@ docker run --rm -v $(pwd)/casper-test.js:/casper-test.js obgr/d-casperjs casperj
 
 #### Run Image interactively
 ```sh
-docker run -it obgr/d-casperjs:latest phantomjs hello.js
+docker run -it obgr/d-casperjs:latest bash
 ```
 
 #### Pull Image
